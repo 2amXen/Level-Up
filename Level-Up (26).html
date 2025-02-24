@@ -1,0 +1,145 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level-Up Muscle Tracker</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .tracker-container {
+            width: 90%;
+            height: 90vh;
+            border: 5px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+            border-radius: 20px;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #0ff;
+            margin-top: 20px;
+            text-shadow: 0 0 30px #0ff, 0 0 60px #0ff, 0 0 90px #0ff;
+        }
+
+        .muscle-section {
+            width: 80%;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+        }
+
+        .muscle-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .muscle-section ul {
+            list-style-type: none;
+        }
+
+        .muscle-section li {
+            margin: 10px 0;
+        }
+
+        .input-label {
+            font-size: 1.2rem;
+        }
+
+        .exercise-input {
+            background-color: #111;
+            color: #0ff;
+            border: 1px solid #0ff;
+            border-radius: 5px;
+            padding: 5px;
+            width: 100%;
+            box-shadow: 0 0 10px #0ff;
+            margin-top: 5px;
+        }
+
+        .exercise-input:focus {
+            outline: none;
+            box-shadow: 0 0 15px #0ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="tracker-container">
+        <h1>Level-Up Life</h1>
+        <br><br>
+        <!-- Strength -->
+        <div class="muscle-section">
+            <h2>Strength</h2>
+            <ul>
+                <li><label class="input-label" for="chest">Chest (Push)</label><input id="chest" class="exercise-input" type="text" placeholder="Input exercise for Push"></li>
+                <li><label class="input-label" for="rombhoid">Rombhoid &amp; Lats (Pull)</label><input id="rombhoid" class="exercise-input" type="text" placeholder="Input exercise for Pull"></li>
+                <li><label class="input-label" for="traps">Traps (Carry)</label><input id="traps" class="exercise-input" type="text" placeholder="Input exercise for Carry"></li>
+                <li><label class="input-label" for="shoulders">Shoulder (Raise)</label><input id="shoulders" class="exercise-input" type="text" placeholder="Input exercise for Raise"></li>
+                <li><label class="input-label" for="biceps">Biceps (Flexion)</label><input id="biceps" class="exercise-input" type="text" placeholder="Input exercise for Flexion"></li>
+                <li><label class="input-label" for="triceps">Triceps (Extension)</label><input id="triceps" class="exercise-input" type="text" placeholder="Input exercise for Extension"></li>
+            </ul>
+        </div>
+
+        <!-- Agility -->
+        <div class="muscle-section">
+            <h2>Agility</h2>
+            <ul>
+                <li><label class="input-label" for="glutes">Glutes (Balance)</label><input id="glutes" class="exercise-input" type="text" placeholder="Input exercise for Balance"></li>
+                <li><label class="input-label" for="quadriceps">Quadriceps (Power)</label><input id="quadriceps" class="exercise-input" type="text" placeholder="Input exercise for Power"></li>
+                <li><label class="input-label" for="calves">Calves (Dodge)</label><input id="calves" class="exercise-input" type="text" placeholder="Input exercise for Dodge"></li>
+            </ul>
+        </div>
+
+        <!-- Dexterity -->
+        <div class="muscle-section">
+            <h2>Dexterity</h2>
+            <ul>
+                <li><label class="input-label" for="brachioradialis">Brachioradialis (Hang)</label><input id="brachioradialis" class="exercise-input" type="text" placeholder="Input exercise for Hang"></li>
+                <li><label class="input-label" for="flexor-digitorum">Flexor Digitorum Profundus (Grip)</label><input id="flexor-digitorum" class="exercise-input" type="text" placeholder="Input exercise for Grip"></li>
+                <li><label class="input-label" for="flexor-carpi">Flexor carpi (Wrist)</label><input id="flexor-carpi" class="exercise-input" type="text" placeholder="Input exercise for Wrist"></li>
+            </ul>
+        </div>
+
+        <!-- Vitality -->
+        <div class="muscle-section"><h2>Vitality</h2>
+            <ul>
+                <li><label class="input-label" for="abs">Abs &amp; Obliques (Endurance)</label><input id="abs" class="exercise-input" type="text" placeholder="Input exercise for Endurance"></li>
+                <li><label class="input-label" for="transversus">Transversus Abdominis (Stability)</label><input id="transversus" class="exercise-input" type="text" placeholder="Input exercise for Stability"></li>
+                <li><label class="input-label" for="cardio">Cardio (Stamina)</label><input id="cardio" class="exercise-input" type="text" placeholder="Input exercise for Stamina"></li>
+            </ul>
+        </div>
+
+        <!-- Intelligence -->
+        <div class="muscle-section"><h2>Intelligence</h2>
+            <ul>
+                <li><label class="input-label" for="cerebrum">Cerebrum (Wisdom)</label><input id="cerebrum" class="exercise-input" type="text" placeholder="Input exercise for Wisdom"></li>
+                <li><label class="input-label" for="cerebellum">Cerebellum (Sense)</label><input id="cerebellum" class="exercise-input" type="text" placeholder="Input exercise for Sense"></li>
+                <li><label class="input-label" for="thalamus">Thalamus (Spirit)</label><input id="thalamus" class="exercise-input" type="text" placeholder="Input exercise for Spirit"></li>            
+            </ul>
+        </div>
+    </div>
+
+
+</body></html>
